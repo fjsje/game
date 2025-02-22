@@ -9,15 +9,18 @@ body {
     background-color: #bbada0;
     color: #776e65;
     font-size: 16px;
+    overflow: hidden;
 }
 
 header {
     text-align: center;
     margin-bottom: 20px;
+    width: 100%;
+    padding: 0 20px;
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 2rem;
     margin: 0;
     color: #74655e;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -25,7 +28,7 @@ h1 {
 
 button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1rem;
     margin-top: 10px;
     cursor: pointer;
     background-color: #8f7a66;
@@ -36,46 +39,41 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+button:hover, button:active {
     background-color: #74655e;
 }
 
 p {
-    font-size: 24px;
+    font-size: 1.2rem;
     margin: 10px 0;
 }
 
 #grid-container {
-    width: 460px;
-    height: 460px;
-    padding: 20px;
+    width: 90%;
+    max-width: 460px;
+    height: auto;
+    padding: 10px;
     background-color: #bbada0;
     border-radius: 10px;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .grid-cell {
-    width: 100px;
-    height: 100px;
-    background-color: #ccc0b3;
-    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #776e65;
+    background-color: #ccc0b3;
+    border-radius: 6px;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.grid-cell:hover {
-    transform: scale(1.05);
 }
 
 #gameover {
@@ -86,8 +84,10 @@ p {
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    font-size: 48px;
+    font-size: 2rem;
     padding: 20px;
     border-radius: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    text-align: center;
 }
